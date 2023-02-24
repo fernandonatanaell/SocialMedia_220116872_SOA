@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "c8fe0d7d-fabe-48e2-8d35-a0638747feec",
+		"name": "chat_aku_dong",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24524579"
+	},
+	"item": [
+		{
+			"name": "Register New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "agnessisilia",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "345",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "Agnes Sisilia",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "Jl. Melon No. 23",
+							"type": "text"
+						},
+						{
+							"key": "nomorhp",
+							"value": "33333333",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/user",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "agnessisilia",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama",
+							"value": "Garit bersama oddy",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "Jl. Mangga No. 101",
+							"type": "text"
+						},
+						{
+							"key": "nomorhp",
+							"value": "444444444",
+							"type": "text"
+						},
+						{
+							"key": "oldpassword",
+							"value": "456",
+							"type": "text"
+						},
+						{
+							"key": "newpassword",
+							"value": "456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/user/garitdewana",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"garitdewana"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Friend",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "agnessisilia",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "345",
+							"type": "text"
+						},
+						{
+							"key": "usercari",
+							"value": "windahbasudara",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/friend",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"friend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Friend",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/friend/agnessisilia",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"friend",
+						"agnessisilia"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "111",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Friend",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "agnessisilia",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "345",
+							"type": "text"
+						},
+						{
+							"key": "usercari",
+							"value": "garitdewana",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/friend",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"friend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "agnessisilia",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "345",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "Hallo win!",
+							"type": "text"
+						},
+						{
+							"key": "usercari",
+							"value": "windahbasudara",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/message",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Message",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/message/agnessisilia",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"message",
+						"agnessisilia"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
